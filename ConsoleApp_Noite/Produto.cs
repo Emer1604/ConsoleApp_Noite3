@@ -30,6 +30,9 @@ namespace ConsoleApp_Noite
         {  return Descricao; }
         public void setDescricao(string descricao)
         { Descricao = descricao; }
+
+        public string ExibirDadosP()
+        { return "Id: " + Id + " Valor: " + Valor + " Descrição: " + Descricao; }
     }
 
 }

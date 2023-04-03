@@ -3,15 +3,14 @@ using ConsoleApp_Noite;
 using ConsoleApp_Noite.Heranca;
 using System;
 
-
+/*
 Produto p1 = new Produto(1, 10.90M, "Cervejinha");
-
 //Console.WriteLine(p1.getDescricao()+" "+p1.getId());
 
 p1.setValor(11.85M);
 p1.setDescricao("Cerveja Skol 1 Litrão");
 //Console.WriteLine(p1.getDescricao() + " " + p1.getId());
-
+Console.WriteLine("-------------------------------------------------------------");
 Endereco endereco1 = new Endereco(
     "Rua sobe e desce",
     "894",
@@ -42,7 +41,7 @@ Endereco endereco2 = new Endereco(
 //Console.WriteLine(c2.getEndereco().getRua() + " " + c2.getEndereco().getNumero());
 c2.setEndereco(endereco2);
 //Console.WriteLine(c2.getEndereco().getRua() + " " + c2.getEndereco().getNumero());
-
+Console.WriteLine("-------------------------------------------------------------");
 Carro gol = new Carro();
 gol.temMotor = true;
 gol.numeroPortas = 4;
@@ -89,7 +88,7 @@ foreach(var item in listaCarros)
         Console.WriteLine(item.ExibirMarca());
     }
 Console.WriteLine("-------------------------------------------------------------");
-List<Cliente> listaCliente = new List<Cliente>();
+/*List<Cliente> listaCliente = new List<Cliente>();
 listaCliente.Add(c1);
 listaCliente.Add(c2);
 listaCliente.Add(c3);
@@ -109,10 +108,6 @@ for (int i=1; i <= 560; i++)
     Console.WriteLine("Id: " + p.getId() + ", Preço: " + p.getValor() + ", Descrição do Produto: " + p.getDescricao());
 }
 
-
-
-
-
 List<Veiculo> listaVeiculos = new List<Veiculo>();
 listaVeiculos.Add(new Veiculo());
 listaVeiculos.Add(new Veiculo());
@@ -121,9 +116,29 @@ listaVeiculos.Add(new Veiculo());
 foreach (var item in listaVeiculos)
 {
     Console.WriteLine(item.ExibirDados());
+}*/
+
+/*Crie uma classe vendas com uma lista de produtos comprada por um cliente
+Imprima na tela a lista de produtos , o Id da venda e a Data da venda.
+Post aqui o link do Github do projeto*/
+Console.WriteLine("--------------------------------------------------------");
+List<Produto> listaProdutos2 = new List<Produto>();
+for(int i = 1; i <= 10; i++)
+{
+    Produto p = new Produto(i, i * 5 + 4, "_______________________");
+    listaProdutos2.Add(p);
 }
+List<Vendas> listaVendas = new List<Vendas>();
+Vendas v1 = new Vendas(16 , "16/04/2002");
+listaVendas.Add(v1);
 
 
-
-
-
+for (int i = 0; i < listaProdutos2.Count; i++)
+{
+    Console.WriteLine(listaProdutos2[i].ExibirDadosP());
+}
+foreach (var item in listaVendas)
+{
+    Console.WriteLine("Id Venda: " + v1.getId() + " Data: " + v1.getData());
+}
+Console.WriteLine("--------------------------------------------------------");
